@@ -66,10 +66,18 @@ public class LineParserTest {
         /* 1 */
         line = "x > 0";
 
-        Object x = 9.0;
+        Object x = 9;
 
         parameters.add(new Parameter(int.class, "x", x));
         instructions.add(new Instruction("x", ">", "0"));
+
+        assertTrue(LineParser.getInstance().checkExpression(parameters, instructions));
+
+        /* 2 */
+        Object y = 9.0;
+
+        parameters.add(new Parameter(double.class, "y", y));
+        instructions.add(new Instruction("y", ">", "5"));
 
         assertTrue(LineParser.getInstance().checkExpression(parameters, instructions));
     }

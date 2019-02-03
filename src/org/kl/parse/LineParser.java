@@ -100,6 +100,10 @@ public class LineParser {
     }
 
     public boolean checkExpression(List<Parameter> parameters, List<Instruction> instructions) throws ContractException {
+        double leftOperand  = 0;
+        double rightOperand = 0;
+
+        Class type = double.class;
         boolean flag = false;
 
         if (parameters.stream()
@@ -109,10 +113,32 @@ public class LineParser {
         }
 
         for (Instruction instruction : instructions) {
-            double leftOperand  = takeOperand(parameters, instruction.getLeftOperand());
-            double rightOperand = takeOperand(parameters, instruction.getRightOperand());
+            if (!checkNumber(instruction.getLeftOperand()) && checkNumber(instruction.getRightOperand())) {
+                type = takeType(parameters, instruction.getLeftOperand());
 
-            flag = checkContract(leftOperand, instruction.getOperator(), rightOperand);
+                leftOperand  = takeOperand(type, parameters, instruction.getLeftOperand());
+                rightOperand = takeOperand(type, instruction.getRightOperand());
+            } else if (checkNumber(instruction.getLeftOperand()) && !checkNumber(instruction.getRightOperand())) {
+                type = takeType(parameters, instruction.getRightOperand());
+
+                leftOperand  = takeOperand(type, instruction.getLeftOperand());
+                rightOperand = takeOperand(type, parameters, instruction.getRightOperand());
+            } else if (!checkNumber(instruction.getLeftOperand()) && !checkNumber(instruction.getRightOperand())) {
+                type = takeType(parameters, instruction.getLeftOperand());
+
+                leftOperand  = takeOperand(type, parameters, instruction.getLeftOperand());
+                rightOperand = takeOperand(type, parameters, instruction.getRightOperand());
+            } else {
+                leftOperand  = takeOperand(instruction.getLeftOperand());
+                rightOperand = takeOperand(instruction.getLeftOperand());
+            }
+
+            if (!checkContract(leftOperand, instruction.getOperator(), rightOperand)) {
+                flag = false;
+                break;
+            } else {
+                flag = true;
+            }
         }
 
         return flag;
@@ -133,12 +159,61 @@ public class LineParser {
         return flag;
     }
 
-    private double takeOperand(List<Parameter> parameters, String operand) {
-        return (double) parameters.stream()
-                         .filter(x -> x.getName().equals(operand))
-                         .map(Parameter::getValue)
-                         .collect(toSingleton());
+    private double takeOperand(String operand) {
+        return Double.valueOf(operand);
     }
+
+    private double takeOperand(Class type, String operand) {
+        double result = 0;
+
+        if (type == byte.class) {
+            result = Byte.valueOf(operand);
+        } else if (type == short.class) {
+            result = Short.valueOf(operand);
+        } else if (type == int.class) {
+            result = Integer.valueOf(operand);
+        } else if (type == long.class) {
+            result = Long.valueOf(operand);
+        } else if (type == float.class) {
+            result = Float.valueOf(operand);
+        } else if (type == double.class) {
+            result = Double.valueOf(operand);
+        }
+
+        return result;
+    }
+
+    private double takeOperand(Class type, List<Parameter> parameters, String operand) {
+        double result = 0;
+
+        Object value = parameters.stream()
+                                 .filter(x -> x.getName().equals(operand))
+                                 .map(Parameter::getValue)
+                                 .collect(toSingleton());
+        if (type == byte.class) {
+            result = (byte) value;
+        } else if (type == short.class) {
+            result = (short) value;
+        } else if (type == int.class) {
+            result = (int) value;
+        } else if (type == long.class) {
+            result = (long) value;
+        } else if (type == float.class) {
+            result = (float) value;
+        } else if (type == double.class) {
+            result = (double) value;
+        }
+
+        return result;
+    }
+
+    private Class takeType(List<Parameter> parameters, String operand) {
+        return parameters.stream()
+                .filter(x -> x.getName().equals(operand))
+                .map(Parameter::getType)
+                .collect(toSingleton());
+    }
+
 
     private boolean isCorrectValue(String value) {
         return value.matches(".*\\d+.*") || value.equals("null") ||

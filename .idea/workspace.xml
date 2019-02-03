@@ -2,33 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/org/kl/LineParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/aspectjrt_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lombok.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snitch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snitch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Expects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/contract/Expects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/bean/Instruction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Parameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/bean/Parameter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/error/ContractException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/error/ContractException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/kl/parse/LineParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/parse/LineParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/reflect/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/reflect/Reflection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/kl/LineParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kl/LineParserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/kl/LineParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/kl/LineParserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +39,7 @@
       <file leaf-file-name="Starter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state>
               <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
             </state>
           </provider>
@@ -70,8 +48,8 @@
       <file leaf-file-name="ExpectsAspect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="527">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,25 +57,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+            <state relative-caret-position="82">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6249#6250#0" expanded="true" />
-                <element signature="e#6303#6304#0" expanded="true" />
+                <element signature="e#5817#5818#0" expanded="true" />
+                <element signature="e#5863#5864#0" expanded="true" />
+                <element signature="e#5914#5915#0" expanded="true" />
+                <element signature="e#5968#5969#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineParserTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LineParserTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="304">
+              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/org/kl/contract/Expects.java" />
         <option value="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" />
         <option value="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/LineParserTest.java" />
         <option value="$PROJECT_DIR$/src/org/kl/Starter.java" />
         <option value="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" />
+        <option value="$PROJECT_DIR$/test/org/kl/LineParserTest.java" />
       </list>
     </option>
   </component>
@@ -198,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,8 +246,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,31 +335,11 @@
       <workItem from="1549114884388" duration="6745000" />
       <workItem from="1549187831182" duration="1426000" />
       <workItem from="1549206742248" duration="4852000" />
+      <workItem from="1549213328587" duration="2282000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 01m 46s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 02m 26s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 04m 14s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 05m 02s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 16m 46s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 28m 53s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 30m 11s.xml">
-      <configuration name="LineParserTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LineParserTest - 2019.02.02 at 17h 31m 21s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
@@ -389,9 +349,30 @@
     <history-entry file="LineParserTest - 2019.02.02 at 17h 33m 49s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 32m 24s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 36m 21s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 37m 11s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 37m 31s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 38m 04s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 39m 37s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineParserTest - 2019.02.03 at 19h 40m 46s.xml">
+      <configuration name="LineParserTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43816000" />
+    <option name="totallyTimeSpent" value="46098000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,9 +385,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -418,7 +401,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.27155825" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.2753404" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.50247115" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -432,21 +415,20 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3294893" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.51235586" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.25642964" />
       <window_info id="Structure" order="1" sideWeight="0.50247115" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -456,13 +438,13 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003762" side_tool="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,24 +454,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2414">
           <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -527,8 +501,10 @@
           <caret line="117" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -556,8 +532,10 @@
           <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -575,8 +553,10 @@
           <caret line="59" column="26" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,19 +689,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state>
           <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
         </state>
       </provider>
@@ -735,22 +705,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="527">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Byte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="145" column="5" lean-forward="true" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+        <state relative-caret-position="82">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
+            <element signature="e#5817#5818#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5914#5915#0" expanded="true" />
+            <element signature="e#5968#5969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

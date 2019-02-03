@@ -5,14 +5,14 @@ import org.kl.contract.Expects;
 public class Starter {
 
     @Expects("x > 0")
-    public double sqrt(byte x) {
+    public double sqrt(int x) {
         return Math.sqrt(x);
     }
 
     public static void main(String[] args) {
         Starter starter = new Starter();
 
-        byte x = 9;
+        int x = 9;
 
         System.out.println("sqrt: " + starter.sqrt(x));
     }
