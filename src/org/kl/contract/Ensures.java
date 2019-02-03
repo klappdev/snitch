@@ -1,16 +1,3 @@
-/**
- * @author kl
- * @version 1.0
- *
- * Annotation help developers add postcondition
- * to method classes for check return value
- *
- * Support next operations:
- * 1) check one level condition
- * 2) support only comparison operations
- * 3) support only numbers and null
- *
- */
 package org.kl.contract;
 
 import java.lang.annotation.ElementType;

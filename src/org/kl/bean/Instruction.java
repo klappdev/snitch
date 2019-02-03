@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Instruction {
     private String operator;
-    private String name;
-    private String value;
+    private String leftOperand;
+    private String rightOperand;
 
-    public Instruction(String operator, String name, String value) {
+    public Instruction(String leftOperand, String operator, String rightOperand) {
+        this.leftOperand = leftOperand;
         this.operator = operator;
-        this.name = name;
-        this.value = value;
+        this.rightOperand = rightOperand;
     }
 
     public String getOperator() {
@@ -21,20 +21,20 @@ public class Instruction {
         this.operator = operator;
     }
 
-    public String getName() {
-        return name;
+    public String getLeftOperand() {
+        return leftOperand;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLeftOperand(String leftOperand) {
+        this.leftOperand = leftOperand;
     }
 
-    public String getValue() {
-        return value;
+    public String getRightOperand() {
+        return rightOperand;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setRightOperand(String rightOperand) {
+        this.rightOperand = rightOperand;
     }
 
     @Override
@@ -50,20 +50,20 @@ public class Instruction {
         Instruction instruction = (Instruction) other;
 
         return  Objects.equals(operator, instruction.operator) &&
-                Objects.equals(name, instruction.name) &&
-                Objects.equals(value, instruction.value);
+                Objects.equals(leftOperand, instruction.leftOperand) &&
+                Objects.equals(rightOperand, instruction.rightOperand);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(operator, name, value);
+        return Objects.hash(operator, leftOperand, rightOperand);
     }
 
     @Override
     public String toString() {
         return "Instruction:\n" +
                 "\toperator:    " + operator    +  "\n" +
-                "\tname:        " + name        +  "\n" +
-                "\tvalue:       " + value;
+                "\tleftOperand:        " + leftOperand +  "\n" +
+                "\trightOperand:       " + rightOperand;
     }
 }
