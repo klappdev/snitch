@@ -25,8 +25,6 @@ Developer also can check value fields class.
 
 In future expects add check call method objects and IDE highlight plugins.
 
-Requirements:
-
-JDK: Java 8
-
+Requirements:<br/>
+JDK: Java 8 <br/>
 libs: AspectJ
