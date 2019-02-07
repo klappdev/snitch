@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/aspectj-1.9.2-src.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aspectj-1.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aspectjrt-1.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aspectjtools-1.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aspectjweaver-1.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/lombok.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kl/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/InvariantAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Instruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Value.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Variable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Ensures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Expects.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Invariant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/error/ContractException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/handle/ContractHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/kl/SnitchTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,12 +48,13 @@
       <file leaf-file-name="Starter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="375">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -267,7 +275,7 @@
       <workItem from="1549269632684" duration="9307000" />
       <workItem from="1549436831847" duration="18417000" />
       <workItem from="1549523302997" duration="9117000" />
-      <workItem from="1549534877904" duration="8550000" />
+      <workItem from="1549534877904" duration="9204000" />
     </task>
     <servers />
   </component>
@@ -304,7 +312,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91489000" />
+    <option name="totallyTimeSpent" value="92143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,6 +325,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
@@ -332,7 +341,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954722" visible="true" weight="0.2151994" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954722" visible="true" weight="0.2151994" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32858992" />
       <window_info id="Structure" order="1" sideWeight="0.5045278" side_tool="true" weight="0.2151994" />
@@ -630,12 +639,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
           </folding>
         </state>
       </provider>
