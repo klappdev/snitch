@@ -8,8 +8,8 @@ public class Instruction {
     private String rightOperand;
 
     public Instruction(String leftOperand, String operator, String rightOperand) {
-        this.leftOperand = leftOperand;
-        this.operator = operator;
+        this.leftOperand  = leftOperand;
+        this.operator     = operator;
         this.rightOperand = rightOperand;
     }
 

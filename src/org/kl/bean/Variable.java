@@ -3,12 +3,12 @@ package org.kl.bean;
 
 import java.util.Objects;
 
-public class Parameter {
+public class Variable {
     private Class type;
     private String name;
     private Object value;
 
-    public Parameter(Class type, String name, Object value) {
+    public Variable(Class type, String name, Object value) {
         this.type = type;
         this.name = name;
         this.value = value;
@@ -36,11 +36,11 @@ public class Parameter {
             return false;
         }
 
-        Parameter parameter = (Parameter) other;
+        Variable variable = (Variable) other;
 
-        return  Objects.equals(type, parameter.type) &&
-                Objects.equals(name, parameter.name) &&
-                Objects.equals(value, parameter.value);
+        return  Objects.equals(type, variable.type) &&
+                Objects.equals(name, variable.name) &&
+                Objects.equals(value, variable.value);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Parameter {
 
     @Override
     public String toString() {
-        return "Parameter:\n" +
+        return "Variable:\n" +
                 "\ttype:    " + type  +  "\n" +
                 "\tname:    " + name  +  "\n" +
                 "\tvalue:   " + value;

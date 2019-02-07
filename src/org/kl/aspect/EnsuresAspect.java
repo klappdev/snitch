@@ -6,11 +6,11 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.CodeSignature;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.kl.bean.Instruction;
-import org.kl.bean.Parameter;
+import org.kl.bean.Variable;
 import org.kl.bean.Value;
 import org.kl.contract.Ensures;
 import org.kl.error.ContractException;
-import org.kl.parse.LineParser;
+import org.kl.handle.ContractHandler;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -25,18 +25,16 @@ public class EnsuresAspect {
         String line = ensures.value();
         Value value = initValue(point, result);
 
-        System.out.println("value: " + line);
-
         try {
-            List<Parameter>   parameters   = initParameters(point);
-            List<Instruction> instructions = LineParser.getInstance().parseLine(line);
+            List<Variable> variables = initParameters(point);
+            List<Instruction> instructions = ContractHandler.getInstance().parseLine(line);
 
-            if (!LineParser.getInstance().checkOperators(instructions)) {
+            if (!ContractHandler.getInstance().checkOperators(instructions)) {
                 throw new ContractException("Operator is not correct. Support operators: " +
-                        LineParser.getInstance().getListOperators());
+                        ContractHandler.getInstance().getListOperators());
             }
 
-            if (!LineParser.getInstance().checkExpression(value, parameters, instructions)) {
+            if (!ContractHandler.getInstance().checkExpression(value, variables, instructions)) {
                 throw new ContractException("Contract is violated: " + line);
             }
         } catch (IndexOutOfBoundsException e) {
@@ -45,8 +43,8 @@ public class EnsuresAspect {
     }
 
     @SuppressWarnings("Duplicates")
-    private List<Parameter> initParameters(JoinPoint point) {
-        List<Parameter> parameters = new ArrayList<Parameter>();
+    private List<Variable> initParameters(JoinPoint point) {
+        List<Variable> variables = new ArrayList<Variable>();
 
         CodeSignature codeSignature = (CodeSignature) point.getSignature();
         Class[]  types = codeSignature.getParameterTypes();
@@ -54,10 +52,10 @@ public class EnsuresAspect {
         Object[] args  = point.getArgs();
 
         for (int i = 0; i < args.length; i++) {
-            parameters.add(new Parameter(types[i], names[i], args[i]));
+            variables.add(new Variable(types[i], names[i], args[i]));
         }
 
-        return parameters;
+        return variables;
     }
 
     private Value initValue(JoinPoint point, Object result) {

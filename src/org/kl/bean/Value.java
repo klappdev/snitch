@@ -42,7 +42,7 @@ public class Value {
 
     @Override
     public String toString() {
-        return "Parameter:\n" +
+        return "Variable:\n" +
                 "\ttype:    " + type  +  "\n" +
                 "\tdata:    " + data;
     }
