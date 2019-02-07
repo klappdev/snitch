@@ -15,7 +15,7 @@ Developer can check input parameters method.
 
 ![alt text](https://raw.githubusercontent.com/klappdev/snitch/master/res/Expects.png)
 
-Developer can check return value method. For return variable use result.
+Developer can check return value method. For return variable use reserved word result.
 
 ![alt text](https://raw.githubusercontent.com/klappdev/snitch/master/res/Ensures.png)
 
