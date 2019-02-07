@@ -14,14 +14,17 @@ public class Starter {
         this.y = 10;
     }
 
+
     @Expects("x > 0")
     @Ensures("result < x")
     public double sqrt(int x) {
         return Math.sqrt(x);
     }
 
+
+
+
     @Expects("x > -1 && x > y")
-    @Ensures("result == true")
     public boolean compare(float x, float y) { return x > y; }
 
     public static void main(String[] args) {
