@@ -3,7 +3,7 @@
 This is simple Java contract library based on AspectJ.
 
 Library can make compare operations with primitive type and 
-check objects for null. 
+check objects for null.<br/>
 There are three type annotation which use for checking.
 
     @Expects   - check parameters method
