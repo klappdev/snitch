@@ -3,8 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snitch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snitch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/bean/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/bean/Value.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/bean/Instruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/bean/Parameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/bean/Parameter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/error/ContractException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/error/ContractException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/kl/parse/LineParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/parse/LineParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/reflect/Reflection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/reflect/Reflection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/kl/LineParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kl/LineParserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/org/kl/LineParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/kl/LineParserTest.java" afterDir="false" />
     </list>
@@ -39,8 +53,11 @@
       <file leaf-file-name="Starter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="105">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +65,17 @@
       <file leaf-file-name="ExpectsAspect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="480">
+              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnsuresAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,30 +83,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineParser.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LineParser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="240">
+              <caret line="276" column="22" selection-start-line="276" selection-start-column="22" selection-end-line="276" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5817#5818#0" expanded="true" />
-                <element signature="e#5863#5864#0" expanded="true" />
-                <element signature="e#5914#5915#0" expanded="true" />
-                <element signature="e#5968#5969#0" expanded="true" />
+                <element signature="e#2625#2626#0" expanded="true" />
+                <element signature="e#2701#2702#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineParserTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineParserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="2835">
+              <caret line="204" selection-start-line="204" selection-end-line="204" />
             </state>
           </provider>
         </entry>
@@ -124,18 +144,20 @@
         <option value="$PROJECT_DIR$/src/org/kl/handle/TraceHandler.java" />
         <option value="$PROJECT_DIR$/src/org/kl/aspect/Precondition.java" />
         <option value="$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Parameter.java" />
         <option value="$PROJECT_DIR$/test/org/kl/ContractTest.java" />
         <option value="$PROJECT_DIR$/test/LinePaserTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" />
         <option value="$PROJECT_DIR$/test/org/kl/LinePaserTest.java" />
         <option value="$PROJECT_DIR$/src/org/kl/contract/Expects.java" />
         <option value="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" />
+        <option value="$PROJECT_DIR$/src/org/kl/bean/Parameter.java" />
+        <option value="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" />
+        <option value="$PROJECT_DIR$/src/org/kl/bean/Value.java" />
         <option value="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" />
+        <option value="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" />
         <option value="$PROJECT_DIR$/src/org/kl/Starter.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" />
         <option value="$PROJECT_DIR$/test/org/kl/LineParserTest.java" />
+        <option value="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" />
       </list>
     </option>
   </component>
@@ -178,6 +200,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,13 +252,6 @@
             <path>
               <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
               <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kl" type="462c0819:PsiDirectoryNode" />
-              <item name="reflect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,9 +264,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Snitch">
+  <component name="RunManager" selected="JUnit.LineParserTest">
     <configuration name="Snitch" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.kl.Starter" />
       <module name="snitch" />
@@ -336,43 +351,46 @@
       <workItem from="1549187831182" duration="1426000" />
       <workItem from="1549206742248" duration="4852000" />
       <workItem from="1549213328587" duration="2282000" />
+      <workItem from="1549269632684" duration="9307000" />
+      <workItem from="1549436831847" duration="18417000" />
+      <workItem from="1549523302997" duration="280000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 31m 21s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 15h 14m 19s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 33m 09s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 15h 14m 52s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.02 at 17h 33m 49s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 15h 15m 06s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 32m 24s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 24m 32s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 36m 21s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 36m 06s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 37m 11s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 36m 48s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 37m 31s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 38m 04s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 38m 04s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 38m 45s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 39m 37s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 40m 11s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LineParserTest - 2019.02.03 at 19h 40m 46s.xml">
+    <history-entry file="LineParserTest - 2019.02.06 at 17h 40m 31s.xml">
       <configuration name="LineParserTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46098000" />
+    <option name="totallyTimeSpent" value="74102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,51 +402,51 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="64" y="-11" width="1377" height="912" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003762" side_tool="true" weight="0.32903227" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32806623" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.51235586" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32988358" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.51228976" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.2753404" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.21218961" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info id="Structure" order="1" sideWeight="0.50247115" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3294893" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32858992" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32729626" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.51235586" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.25642964" />
+      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.50247115" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -437,14 +455,14 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003762" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
-      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.25642964" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,124 +471,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="63" column="66" lean-forward="true" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/contract/Ensures.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/contract/Invariant.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/error/ContractException.java" />
@@ -616,16 +522,8 @@
     </entry>
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/Arrays.java" />
     <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/Objects.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/kl/error/ContractException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" />
     <entry file="file://$PROJECT_DIR$/test/org/kl/ContractTest.java" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/stream/Stream.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -633,113 +531,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar!/org/junit/jupiter/api/Assertions.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/CallerSensitive.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Class.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Byte.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/kl/reflect/Reflection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2992">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Invariant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Expects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Ensures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="105">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/reflect/MethodSignature.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="283" column="12" selection-start-line="283" selection-start-column="12" selection-end-line="283" selection-end-column="12" />
+        <state relative-caret-position="135">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/annotation/After.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="163" column="11" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/CallerSensitive.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="120">
           <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Class.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/annotation/AfterReturning.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="846" column="34" lean-forward="true" selection-start-line="846" selection-start-column="34" selection-end-line="846" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/reflect/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="252" column="13" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="1104" column="19" selection-start-line="1104" selection-start-column="19" selection-end-line="1104" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="874" column="12" selection-start-line="874" selection-start-column="12" selection-end-line="874" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar!/org/junit/jupiter/api/Assertions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="480">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/kl/error/ContractException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="482" column="26" selection-start-line="482" selection-start-column="26" selection-end-line="482" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Instruction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/reflect/Reflection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="105">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Byte.java">
+    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
+    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="345">
+          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5817#5818#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5914#5915#0" expanded="true" />
-            <element signature="e#5968#5969#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/org/kl/LineParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
+        <state relative-caret-position="2835">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/kl/parse/LineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="276" column="22" selection-start-line="276" selection-start-column="22" selection-end-line="276" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
           </folding>
         </state>
       </provider>

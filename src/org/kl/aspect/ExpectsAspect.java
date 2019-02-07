@@ -18,10 +18,32 @@ public class ExpectsAspect {
 
     @Before("execution(* *(..)) && @annotation(expects)")
     public void precondition(JoinPoint point, Expects expects) throws ContractException {
-        List<Parameter>   parameters   = new ArrayList<>();
-        List<Instruction> instructions;
-
         String line  = expects.value();
+
+        System.out.println("value: " + line);
+
+        try {
+            List<Parameter>   parameters   = initParameters(point);
+            List<Instruction> instructions = LineParser.getInstance().parseLine(line);
+
+            if (!LineParser.getInstance().checkOperators(instructions)) {
+                throw new ContractException("Operator is not correct. Support operators: " +
+                          LineParser.getInstance().getListOperators());
+            }
+
+            if (!LineParser.getInstance().checkExpression(parameters, instructions)) {
+                throw new ContractException("Contract is violated: " + line +
+                                            ", where " + parameters.get(0).getName() +
+                                            " is " + parameters.get(0).getValue());
+            }
+        } catch (IndexOutOfBoundsException e) {
+            throw new ContractException("Expression is not correct");
+        }
+    }
+
+    @SuppressWarnings("Duplicates")
+    private List<Parameter> initParameters(JoinPoint point) {
+        List<Parameter> parameters = new ArrayList<Parameter>();
 
         CodeSignature codeSignature = (CodeSignature) point.getSignature();
         Class[]  types = codeSignature.getParameterTypes();
@@ -32,28 +54,6 @@ public class ExpectsAspect {
             parameters.add(new Parameter(types[i], names[i], args[i]));
         }
 
-        try {
-            instructions = LineParser.getInstance().parseLine(line);
-
-            System.out.println("value: " + line);
-
-            if (!LineParser.getInstance().checkParameters(parameters, instructions)) {
-                throw new ContractException("Parameter name is not correct");
-            }
-
-            if (!LineParser.getInstance().checkOperators(instructions)) {
-                throw new ContractException("Operator is not correct. Support operators: " +
-                          LineParser.getInstance().getListOperators());
-            }
-
-
-            if (!LineParser.getInstance().checkExpression(parameters, instructions)) {
-                throw new ContractException("Contract is violated: " + line +
-                                            ", where " + parameters.get(0).getName() +
-                                            " is " + parameters.get(0).getValue());
-            }
-        } catch (IndexOutOfBoundsException e) {
-            throw new ContractException("Expression is not correct");
-        }
+        return parameters;
     }
 }

@@ -17,24 +17,12 @@ public class Instruction {
         return operator;
     }
 
-    public void setOperator(String operator) {
-        this.operator = operator;
-    }
-
     public String getLeftOperand() {
         return leftOperand;
     }
 
-    public void setLeftOperand(String leftOperand) {
-        this.leftOperand = leftOperand;
-    }
-
     public String getRightOperand() {
         return rightOperand;
-    }
-
-    public void setRightOperand(String rightOperand) {
-        this.rightOperand = rightOperand;
     }
 
     @Override

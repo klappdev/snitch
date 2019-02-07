@@ -2,6 +2,7 @@ package org.kl.parse;
 
 import org.kl.bean.Instruction;
 import org.kl.bean.Parameter;
+import org.kl.bean.Value;
 import org.kl.error.ContractException;
 
 import java.util.ArrayList;
@@ -57,22 +58,9 @@ public class LineParser {
         return list;
     }
 
-    public boolean checkParameters(List<Parameter> parameters, List<Instruction> instructions) {
-        boolean flag = false;
-
-        List<String> nameParameters = parameters.stream()
-                                                .map(Parameter::getName)
-                                                .collect(Collectors.toList());
-        List<String> leftOperands = instructions.stream()
-                                                .map(Instruction::getLeftOperand)
-                                                .distinct()
-                                                .collect(Collectors.toList());
-
-        if (nameParameters.containsAll(leftOperands)) {
-            flag = true;
-        }
-
-        return flag;
+    private boolean checkParameter(List<Parameter> parameters, String operand) {
+        return parameters.stream()
+                         .anyMatch(x -> x.getName().equals(operand));
     }
 
     public boolean checkOperators(List<Instruction> instructions) {
@@ -99,6 +87,18 @@ public class LineParser {
         return true;
     }
 
+    private boolean checkFlag(String operand) {
+        return (operand.equals("true")) || (operand.equals("false"));
+    }
+
+    private boolean checkNull(String operand) {
+        return operand.equals("null");
+    }
+
+    private boolean checkResult(String line) {
+        return line.equalsIgnoreCase("result");
+    }
+
     public boolean checkExpression(List<Parameter> parameters, List<Instruction> instructions) throws ContractException {
         double leftOperand  = 0;
         double rightOperand = 0;
@@ -113,29 +113,127 @@ public class LineParser {
         }
 
         for (Instruction instruction : instructions) {
-            if (!checkNumber(instruction.getLeftOperand()) && checkNumber(instruction.getRightOperand())) {
-                type = takeType(parameters, instruction.getLeftOperand());
+            String leftValue  = instruction.getLeftOperand();
+            String rightValue = instruction.getRightOperand();
 
-                leftOperand  = takeOperand(type, parameters, instruction.getLeftOperand());
-                rightOperand = takeOperand(type, instruction.getRightOperand());
-            } else if (checkNumber(instruction.getLeftOperand()) && !checkNumber(instruction.getRightOperand())) {
-                type = takeType(parameters, instruction.getRightOperand());
+            if (checkParameter(parameters, leftValue) && checkNumber(rightValue)) {
+                /* x <=> 0 */
+                type = takeType(parameters, leftValue);
 
-                leftOperand  = takeOperand(type, instruction.getLeftOperand());
-                rightOperand = takeOperand(type, parameters, instruction.getRightOperand());
-            } else if (!checkNumber(instruction.getLeftOperand()) && !checkNumber(instruction.getRightOperand())) {
-                type = takeType(parameters, instruction.getLeftOperand());
+                leftOperand  = takeOperand(type, parameters, leftValue);
+                rightOperand = takeOperand(type, rightValue);
+            } else if (checkNumber(leftValue) && checkParameter(parameters, rightValue)) {
+                /* 0 <=> x */
+                type = takeType(parameters, rightValue);
 
-                leftOperand  = takeOperand(type, parameters, instruction.getLeftOperand());
-                rightOperand = takeOperand(type, parameters, instruction.getRightOperand());
+                leftOperand  = takeOperand(type, leftValue);
+                rightOperand = takeOperand(type, parameters, rightValue);
+            } else if (checkParameter(parameters, leftValue) && checkParameter(parameters, rightValue)) {
+                /* x <=> y */
+                type = takeType(parameters, leftValue);
+
+                leftOperand  = takeOperand(type, parameters, leftValue);
+                rightOperand = takeOperand(type, parameters, rightValue);
+            } else if (checkParameter(parameters, leftValue) && checkFlag(rightValue)) {
+                /* x <=> true vs false */
+                type = takeType(parameters, leftValue);
+                checkConditionFlag(type, instruction.getOperator());
+
+                leftOperand  = takeOperand(type, parameters, leftValue);
+                rightOperand = rightValue.equals("true") ? 1 : 0;
+            } else if (checkFlag(leftValue) && checkParameter(parameters, rightValue)) {
+                /* true vs false <=> x */
+                type = takeType(parameters, leftValue);
+                checkConditionFlag(type, instruction.getOperator());
+
+                leftOperand  = leftValue.equals("true") ? 1 : 0;
+                rightOperand = takeOperand(type, parameters, rightValue);
             } else {
-                leftOperand  = takeOperand(instruction.getLeftOperand());
-                rightOperand = takeOperand(instruction.getLeftOperand());
+                /* 0 <=> 0 */
+                throw new ContractException("Compare two number has not any effect");
             }
 
             if (!checkContract(leftOperand, instruction.getOperator(), rightOperand)) {
                 flag = false;
                 break;
+            } else {
+                flag = true;
+            }
+        }
+
+        return flag;
+    }
+
+    public boolean checkExpression(Value value, List<Parameter> parameters, List<Instruction> instructions) throws ContractException {
+        double leftOperand  = 0;
+        double rightOperand = 0;
+
+        boolean flag   = false;
+        Class type = double.class;
+
+        for (Instruction instruction : instructions) {
+            String leftValue  = instruction.getLeftOperand();
+            String rightValue = instruction.getRightOperand();
+
+            if (checkResult(leftValue) && checkNumber(rightValue)) {
+                /* result <=> 0 */
+                checkConditionResult(leftValue);
+
+                leftOperand  = takeResult(value);
+                rightOperand = takeOperand(value.getType(), rightValue);
+            } else if (checkNumber(leftValue) && checkResult(rightValue)) {
+                /* 0 <=> result */
+                checkConditionResult(rightValue);
+
+                leftOperand  = takeOperand(value.getType(), leftValue);
+                rightOperand = takeResult(value);
+            } else if (checkResult(leftValue) && checkParameter(parameters, rightValue)) {
+                /* x <=> result */
+                checkConditionResult(leftValue);
+
+                type = takeType(parameters, rightValue);
+
+                leftOperand  = takeResult(value);
+                rightOperand = takeOperand(type, parameters, rightValue);
+            } else if (checkParameter(parameters, leftValue) && checkResult(rightValue)) {
+                /* result <=> x */
+                checkConditionResult(rightValue);
+
+                type = takeType(parameters, leftValue);
+
+                leftOperand  = takeOperand(type, parameters, leftValue);
+                rightOperand = takeResult(value);
+            } else if (checkResult(leftValue) && checkFlag(rightValue)) {
+                /* result <=> true vs false */
+                checkConditionFlag(value.getType(), instruction.getOperator(), leftValue);
+
+                leftOperand  = String.valueOf(value.getData()).equals("true") ? 1 : 0;
+                rightOperand = rightValue.equals("true") ? 1 : 0;
+            } else if (checkFlag(leftValue) && checkResult(rightValue)) {
+                /* true vs false <=> result */
+                checkConditionFlag(value.getType(), instruction.getOperator(), rightValue);
+
+                leftOperand = leftValue.equals("true") ? 1 : 0;
+                rightOperand = value.getData().equals("true") ? 1 : 0;
+            } else if (checkResult(leftValue) && checkNull(rightValue)) {
+                /* result <=> null */
+                checkConditionObject(value, instruction.getOperator(), leftValue);
+
+                leftOperand  = value.getData() != null ? 1 : 0;
+                rightOperand = 0;
+            } else if (checkNull(leftValue) && checkResult(rightValue)) {
+                /* null <=> right */
+                checkConditionObject(value, instruction.getOperator(), rightValue);
+
+                leftOperand  = 0;
+                rightOperand = value.getData() != null ? 1 : 0;
+            } else {
+                throw new ContractException("Correct return instruction: result operator right \n" +
+                                            " or left operator result");
+            }
+
+            if (!checkContract(leftOperand, instruction.getOperator(), rightOperand)) {
+                flag = false; break;
             } else {
                 flag = true;
             }
@@ -159,10 +257,6 @@ public class LineParser {
         return flag;
     }
 
-    private double takeOperand(String operand) {
-        return Double.valueOf(operand);
-    }
-
     private double takeOperand(Class type, String operand) {
         double result = 0;
 
@@ -183,13 +277,19 @@ public class LineParser {
         return result;
     }
 
-    private double takeOperand(Class type, List<Parameter> parameters, String operand) {
+    private double takeOperand(Class type, List<Parameter> parameters, String operand) throws ContractException {
         double result = 0;
+        Object value;
 
-        Object value = parameters.stream()
-                                 .filter(x -> x.getName().equals(operand))
-                                 .map(Parameter::getValue)
-                                 .collect(toSingleton());
+        try {
+            value = parameters.stream()
+                              .filter(x -> x.getName().equals(operand))
+                              .map(Parameter::getValue)
+                              .collect(toSingleton());
+        } catch (IllegalStateException e) {
+            throw new ContractException("Operand is not number");
+        }
+
         if (type == byte.class) {
             result = (byte) value;
         } else if (type == short.class) {
@@ -202,6 +302,28 @@ public class LineParser {
             result = (float) value;
         } else if (type == double.class) {
             result = (double) value;
+        } else if (type == boolean.class) {
+            result = (boolean) value ? 1 : 0;
+        }
+
+        return result;
+    }
+
+    private double takeResult(Value value) {
+        double result = 0;
+
+        if (value.getType() == byte.class) {
+            result = (byte) value.getData();
+        } else if (value.getType() == short.class) {
+            result = (short) value.getData();
+        } else if (value.getType() == int.class) {
+            result = (int) value.getData();
+        } else if (value.getType() == long.class) {
+            result = (long) value.getData();
+        } else if (value.getType() == float.class) {
+            result = (float) value.getData();
+        } else if (value.getType() == double.class) {
+            result = (double) value.getData();
         }
 
         return result;
@@ -214,10 +336,48 @@ public class LineParser {
                 .collect(toSingleton());
     }
 
+    private void checkConditionObject(Value value, String operator, String operand) throws ContractException {
+        if (!operand.equalsIgnoreCase("result")) {
+            throw new ContractException("Name return variable must be - result");
+        }
 
-    private boolean isCorrectValue(String value) {
-        return value.matches(".*\\d+.*") || value.equals("null") ||
-                value.equals("true")     || value.equals("false");
+        if (!operator.equals("==") && !operator.equals("!=")) {
+            throw new ContractException("Support operators for flags: != or ==");
+        }
+
+        if (value == null) {
+            throw new ContractException("Type return value must be - object");
+        }
+    }
+
+    private void checkConditionFlag(Class type, String operator, String operand) throws ContractException {
+        if (!operand.equalsIgnoreCase("result")) {
+            throw new ContractException("Name return variable must be - result");
+        }
+
+        if (!operator.equals("==") && !operator.equals("!=")) {
+            throw new ContractException("Support operators for flags: != or ==");
+        }
+
+        if (type != boolean.class) {
+            throw new ContractException("Type return value must be - boolean");
+        }
+    }
+
+    private void checkConditionFlag(Class type, String operator) throws ContractException {
+        if (!operator.equals("==") && !operator.equals("!=")) {
+            throw new ContractException("Support operators for flags: != or ==");
+        }
+
+        if (type != boolean.class) {
+            throw new ContractException("Type return value must be - boolean");
+        }
+    }
+
+    private void checkConditionResult(String operand) throws ContractException {
+        if (!operand.equalsIgnoreCase("result")) {
+            throw new ContractException("Name return variable must be - result");
+        }
     }
 
     private static <T> Collector<T, ?, T> toSingleton() {
