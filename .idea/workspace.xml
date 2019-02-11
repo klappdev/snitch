@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/kot.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_17_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Ensures.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Ensures.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Expects.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Expects.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Invariant.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Invariant.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snitch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snitch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Expects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/contract/Expects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Invariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/contract/Invariant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/InvariantAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/InvariantAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Ensures.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/contract/Ensures.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Expects.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/contract/Expects.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/contract/Invariant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/contract/Invariant.class" afterDir="false" />
-    </list>
+    <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -321,7 +301,7 @@
       <workItem from="1549634281852" duration="715000" />
       <workItem from="1549873477422" duration="2148000" />
       <workItem from="1549875651719" duration="360000" />
-      <workItem from="1549876036227" duration="2819000" />
+      <workItem from="1549876036227" duration="3144000" />
     </task>
     <servers />
   </component>
@@ -358,7 +338,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100023000" />
+    <option name="totallyTimeSpent" value="100348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -370,7 +350,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1442" height="877" extended-state="7" />
+    <frame x="-1" y="0" width="1442" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
