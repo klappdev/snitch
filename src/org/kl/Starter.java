@@ -14,10 +14,10 @@ public class Starter {
         this.y = 10;
     }
 
-    @Expects("x > 0")
-    @Ensures("result < x")
-    private double sqrt(int x) {
-        return Math.sqrt(x);
+    @Expects("line != null")
+    @Ensures("result != false")
+    private boolean isNull(String line) {
+        return line.isEmpty();
     }
 
     @Expects("x > -1 && x > y")
@@ -39,7 +39,7 @@ public class Starter {
         int x = 20;
         int y = 15;
 
-        System.out.println("sqrt: " + starter.sqrt(x));
         System.out.println("compare : " + starter.compare(x, y));
+        System.out.println("isEmpty : " + starter.isNull("String"));
     }
 }
