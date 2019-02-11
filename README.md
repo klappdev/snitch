@@ -23,7 +23,10 @@ Developer also can check value fields class.
 
 ![alt text](https://raw.githubusercontent.com/klappdev/snitch/master/res/Invariant.png)
 
-In future expects add check call method objects and IDE highlight syntax plugins.
+Support syntax highlight for string contract annotations in IntelliJ Idea<br/>
+through language injection. 
+
+In future expects add check call method objects and Eclipse IDE highlight syntax plugins.
 
 Requirements:<br/>
 JDK: Java 8 <br/>
