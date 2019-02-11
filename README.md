@@ -23,7 +23,7 @@ Developer also can check value fields class.
 
 ![alt text](https://raw.githubusercontent.com/klappdev/snitch/master/res/Invariant.png)
 
-In future expects add check call method objects and IDE highlight plugins.
+In future expects add check call method objects and IDE highlight syntax plugins.
 
 Requirements:<br/>
 JDK: Java 8 <br/>
