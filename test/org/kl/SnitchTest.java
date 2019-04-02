@@ -5,10 +5,12 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.kl.bean.Instruction;
+import org.kl.bean.Person;
 import org.kl.bean.Variable;
 import org.kl.bean.Value;
 import org.kl.error.ContractException;
 import org.kl.handle.ContractHandler;
+import org.kl.state.Gender;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +75,6 @@ public class SnitchTest {
         assertEquals(instruction, new Instruction("x", ".",  "contains"));
     }
 
-    @Disabled
     @Test
     public void checkExpectsTest() throws ContractException {
         /* 1 */
@@ -144,22 +145,40 @@ public class SnitchTest {
         assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
 
         /* 7 */
-        Integer p = 1;
+        Person p = null;
 
         instructions.clear();
         variables.clear();
-        variables.add(new Variable(boolean.class, "p", p));
+        variables.add(new Variable(Person.class, "p", p));
         instructions.add(new Instruction("p", "==", "null"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
 
         /* 8 */
         instructions.clear();
         variables.clear();
-        variables.add(new Variable(boolean.class, "p", p));
+        variables.add(new Variable(Person.class, "p", p));
         instructions.add(new Instruction("null", "!=", "p"));
 
+        assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
+
+        /* 9 */
+        Gender g = Gender.MALE;
+
+        instructions.clear();
+        variables.clear();
+        variables.add(new Variable(Gender.class, "g", g));
+        instructions.add(new Instruction("g", "==", "org.kl.state.Gender.MALE"));
+
         assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+
+        /* 10 */
+        instructions.clear();
+        variables.clear();
+        variables.add(new Variable(Gender.class, "g", g));
+        instructions.add(new Instruction("org.kl.state.Gender.FEMALE", "==", "g"));
+
+        assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
     }
 
     @Disabled

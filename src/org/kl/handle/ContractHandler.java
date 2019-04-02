@@ -87,11 +87,13 @@ public class ContractHandler {
         Class type = double.class;
         boolean flag = false;
 
+        /*
         if (variables.stream()
                       .map(Variable::getType)
                       .noneMatch(Class::isPrimitive)) {
             throw new ContractException("Types variables must be primitive");
         }
+        */
 
         for (Instruction instruction : instructions) {
             String leftValue  = instruction.getLeftOperand();
@@ -136,16 +138,30 @@ public class ContractHandler {
 
                 leftOperand  = takeOperand(type, variables, leftValue);
                 rightOperand = 0;
-            } else if (checkNull(leftValue) && checkResult(rightValue)) {
+            } else if (checkNull(leftValue) && checkParameter(variables, rightValue)) {
                 /* null <=> x */
-                type = takeType(variables, leftValue);
+                type = takeType(variables, rightValue);
                 checkConditionInstance(type, instruction.getOperator());
 
                 leftOperand  = 0;
                 rightOperand = takeOperand(type, variables, rightValue);
+            } else if (checkParameter(variables, leftValue) && checkEnumerator(rightValue)) {
+                /* x <=> enum */
+                type = takeType(variables, leftValue);
+                checkConditionEnum(type, instruction.getOperator());
+
+                leftOperand  = takeOperand(type, variables, leftValue);
+                rightOperand = takeOperand(type, rightValue);
+            } else if (checkEnumerator(leftValue) && checkParameter(variables, rightValue)) {
+                /* enum <=> x */
+                type = takeType(variables, rightValue);
+                checkConditionEnum(type, instruction.getOperator());
+
+                leftOperand = takeOperand(type, leftValue);
+                rightOperand  = takeOperand(type, variables, rightValue);
             } else {
                 /* 0 <=> 0 */
-                throw new ContractException("Compare two number has not any effect");
+                throw new ContractException("Compare two parameters has not any effect");
             }
 
             if (!checkContract(leftOperand, instruction.getOperator(), rightOperand)) {
@@ -254,26 +270,20 @@ public class ContractHandler {
 
     private boolean checkParameter(List<Variable> variables, String operand) {
         return variables.stream()
-                .anyMatch(x -> x.getName().equals(operand));
+                        .anyMatch(x -> x.getName().equals(operand));
     }
 
     public boolean checkOperators(List<Instruction> instructions) {
-        boolean flag = false;
-
         List<String> operators = instructions.stream()
                 .map(Instruction::getOperator)
                 .distinct()
                 .collect(Collectors.toList());
-        if (Arrays.asList(LIST_OPERATORS).containsAll(operators)) {
-            flag = true;
-        }
-
-        return flag;
+        return Arrays.asList(LIST_OPERATORS).containsAll(operators);
     }
 
     private boolean checkNumber(String line) {
         try {
-            double number = Double.parseDouble(line);
+            Double.parseDouble(line);
         } catch (NumberFormatException | NullPointerException e) {
             return false;
         }
@@ -281,18 +291,29 @@ public class ContractHandler {
         return true;
     }
 
+    private boolean checkEnumerator(String line) {
+        try {
+            String name = line.substring(0, line.lastIndexOf("."));
+
+            return Class.forName(name).isEnum();
+        } catch (StringIndexOutOfBoundsException | ClassNotFoundException e) {
+            return false;
+        }
+    }
+
     private boolean checkFlag(String operand) {
-        return (operand.equals("true")) || (operand.equals("false"));
+        return (operand.trim().equals("true")) || (operand.trim().equals("false"));
     }
 
     private boolean checkNull(String operand) {
-        return operand.equals("null");
+        return operand.trim().equals("null");
     }
 
     private boolean checkResult(String line) {
         return line.equalsIgnoreCase("result");
     }
 
+    @SuppressWarnings("unchecked")
     private double takeOperand(Class type, String operand) {
         double result = 0;
 
@@ -308,6 +329,8 @@ public class ContractHandler {
             result = Float.valueOf(operand);
         } else if (type == double.class) {
             result = Double.valueOf(operand);
+        } else if (type.isEnum()) {
+            result = Enum.valueOf(type, operand.substring(operand.lastIndexOf(".") + 1)).ordinal();
         }
 
         return result;
@@ -341,7 +364,7 @@ public class ContractHandler {
         } else if (type == boolean.class) {
             result = (boolean) value ? 1 : 0;
         } else if (type == Object.class) {
-            result = (Object) value != null ? 1 : 0;
+            result = value != null ? 1 : 0;
         }
 
         return result;
@@ -380,7 +403,7 @@ public class ContractHandler {
         }
 
         if (!operator.equals("==") && !operator.equals("!=")) {
-            throw new ContractException("Support operators for flags: != or ==");
+            throw new ContractException("Support operators for object: != or ==");
         }
 
         if (value.getType().isPrimitive()) {
@@ -390,11 +413,21 @@ public class ContractHandler {
 
     private void checkConditionInstance(Class type, String operator) throws ContractException {
         if (!operator.equals("==") && !operator.equals("!=")) {
-            throw new ContractException("Support operators for flags: != or ==");
+            throw new ContractException("Support operators for object: != or ==");
         }
 
         if (type.isPrimitive()) {
             throw new ContractException("Type variable must be - object");
+        }
+    }
+
+    private void checkConditionEnum(Class type, String operator) throws ContractException {
+        if (!operator.equals("==") && !operator.equals("!=")) {
+            throw new ContractException("Support operators for enum: != or ==");
+        }
+
+        if (!type.isEnum()) {
+            throw new ContractException("Type variable must be - enum");
         }
     }
 
