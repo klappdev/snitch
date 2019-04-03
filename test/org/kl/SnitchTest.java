@@ -65,6 +65,7 @@ public class SnitchTest {
         assertEquals(instructions.get(2), new Instruction("y", "<", "50"));
     }
 
+    @Disabled
     @Test
     public void parseLineRoutineTest() throws ContractException {
         /* 1 */
@@ -75,6 +76,7 @@ public class SnitchTest {
         assertEquals(instruction, new Instruction("x", ".",  "contains"));
     }
 
+    @Disabled
     @Test
     public void checkExpectsTest() throws ContractException {
         /* 1 */
@@ -181,7 +183,6 @@ public class SnitchTest {
         assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
     }
 
-    @Disabled
     @Test
     public void checkEnsuresTest() throws ContractException {
         /* 1 */
@@ -268,5 +269,21 @@ public class SnitchTest {
         instructions.add(new Instruction("null", "!=", "result"));
 
         assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+
+        /* 10 */
+        value = new Value(Gender.class, Gender.MALE);
+
+        instructions.clear();
+        variables.clear();
+        instructions.add(new Instruction("result", "==", "org.kl.state.Gender.MALE"));
+
+        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+
+        /* 11 */
+        instructions.clear();
+        variables.clear();
+        instructions.add(new Instruction("org.kl.state.Gender.FEMALE", "==", "result"));
+
+        assertFalse(ContractHandler.getInstance().checkExpression(value, variables, instructions));
     }
 }

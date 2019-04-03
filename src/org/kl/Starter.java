@@ -25,14 +25,6 @@ public class Starter {
         return x > y;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
     public static void main(String[] args) {
         Starter starter = new Starter();
 

@@ -41,9 +41,9 @@ public class InvariantAspect {
         } catch (ContractException e) {
             throw new ContractException("Expression is not correct " + e.getMessage());
         } catch (IllegalAccessException e) {
-            throw new ContractException("Can not get fields class ");
+            throw new ContractException("Can not get fields class " + e.getMessage());
         } catch (Throwable e) {
-            throw new ContractException("Can not create object ");
+            throw new ContractException("Can not create object " + e.getMessage());
         }
 
         return value;

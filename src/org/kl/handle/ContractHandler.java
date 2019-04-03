@@ -199,7 +199,7 @@ public class ContractHandler {
                 leftOperand  = takeOperand(value.getType(), leftValue);
                 rightOperand = takeResult(value);
             } else if (checkResult(leftValue) && checkParameter(variables, rightValue)) {
-                /* x <=> result */
+                /* result <=> x */
                 checkConditionResult(leftValue);
 
                 type = takeType(variables, rightValue);
@@ -207,7 +207,7 @@ public class ContractHandler {
                 leftOperand  = takeResult(value);
                 rightOperand = takeOperand(type, variables, rightValue);
             } else if (checkParameter(variables, leftValue) && checkResult(rightValue)) {
-                /* result <=> x */
+                /* x <=> result */
                 checkConditionResult(rightValue);
 
                 type = takeType(variables, leftValue);
@@ -216,15 +216,15 @@ public class ContractHandler {
                 rightOperand = takeResult(value);
             } else if (checkResult(leftValue) && checkFlag(rightValue)) {
                 /* result <=> true vs false */
-                checkConditionFlag(value.getType(), instruction.getOperator(), leftValue);
+                checkConditionFlag(value, instruction.getOperator(), leftValue);
 
                 leftOperand  = String.valueOf(value.getData()).equals("true") ? 1 : 0;
                 rightOperand = rightValue.equals("true") ? 1 : 0;
             } else if (checkFlag(leftValue) && checkResult(rightValue)) {
                 /* true vs false <=> result */
-                checkConditionFlag(value.getType(), instruction.getOperator(), rightValue);
+                checkConditionFlag(value, instruction.getOperator(), rightValue);
 
-                leftOperand = leftValue.equals("true") ? 1 : 0;
+                leftOperand  = leftValue.equals("true") ? 1 : 0;
                 rightOperand = value.getData().equals("true") ? 1 : 0;
             } else if (checkResult(leftValue) && checkNull(rightValue)) {
                 /* result <=> null */
@@ -238,6 +238,18 @@ public class ContractHandler {
 
                 leftOperand  = 0;
                 rightOperand = value.getData() != null ? 1 : 0;
+            } else if (checkResult(leftValue) && checkEnumerator(rightValue)) {
+                /* result <=> enum */
+                checkConditionEnum(value, instruction.getOperator(), leftValue);
+
+                leftOperand  = takeResult(value);
+                rightOperand = takeOperand(value.getType(), rightValue);
+            } else if (checkEnumerator(leftValue) && checkResult(rightValue)) {
+                /* enum <=> result */
+                checkConditionEnum(value, instruction.getOperator(), rightValue);
+
+                leftOperand  = takeOperand(value.getType(), leftValue);
+                rightOperand = takeResult(value);
             } else {
                 throw new ContractException("Correct return instruction: result operator right \n" +
                                             " or left operator result");
@@ -370,6 +382,7 @@ public class ContractHandler {
         return result;
     }
 
+    @SuppressWarnings("unchecked")
     private double takeResult(Value value) {
         double result = 0;
 
@@ -385,6 +398,8 @@ public class ContractHandler {
             result = (float) value.getData();
         } else if (value.getType() == double.class) {
             result = (double) value.getData();
+        } else if (value.getType().isEnum()) {
+            result = Enum.valueOf(value.getType(), value.getData().toString()).ordinal();
         }
 
         return result;
@@ -392,9 +407,9 @@ public class ContractHandler {
 
     private Class takeType(List<Variable> variables, String operand) {
         return variables.stream()
-                .filter(x -> x.getName().equals(operand))
-                .map(Variable::getType)
-                .collect(toSingleton());
+                        .filter(x -> x.getName().equals(operand))
+                        .map(Variable::getType)
+                        .collect(toSingleton());
     }
 
     private void checkConditionInstance(Value value, String operator, String operand) throws ContractException {
@@ -421,6 +436,20 @@ public class ContractHandler {
         }
     }
 
+    private void checkConditionEnum(Value value, String operator, String operand) throws ContractException {
+        if (!operand.equalsIgnoreCase("result")) {
+            throw new ContractException("Name return variable must be - result");
+        }
+
+        if (!operator.equals("==") && !operator.equals("!=")) {
+            throw new ContractException("Support operators for enum: != or ==");
+        }
+
+        if (!value.getType().isEnum()) {
+            throw new ContractException("Type variable must be - enum");
+        }
+    }
+
     private void checkConditionEnum(Class type, String operator) throws ContractException {
         if (!operator.equals("==") && !operator.equals("!=")) {
             throw new ContractException("Support operators for enum: != or ==");
@@ -431,7 +460,10 @@ public class ContractHandler {
         }
     }
 
-    private void checkConditionFlag(Class type, String operator, String operand) throws ContractException {
+    @SuppressWarnings("unchecked")
+    private void checkConditionFlag(Value value, String operator, String operand) throws ContractException {
+        Class<Boolean> clazz = value.getType();
+
         if (!operand.equalsIgnoreCase("result")) {
             throw new ContractException("Name return variable must be - result");
         }
@@ -440,7 +472,7 @@ public class ContractHandler {
             throw new ContractException("Support operators for flags: != or ==");
         }
 
-        if (type != boolean.class) {
+        if (clazz != boolean.class) {
             throw new ContractException("Type return value must be - boolean");
         }
     }
