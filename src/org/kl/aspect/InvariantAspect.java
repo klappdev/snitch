@@ -9,6 +9,8 @@ import org.kl.bean.Variable;
 import org.kl.contract.Invariant;
 import org.kl.error.ContractException;
 import org.kl.handle.ContractHandler;
+import org.kl.handle.ContractParser;
+import org.kl.handle.ContractVerifier;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -27,14 +29,14 @@ public class InvariantAspect {
             line  = value.getClass().getDeclaredAnnotation(Invariant.class).value();
 
             List<Variable> fields = initFields(value);
-            List<Instruction> instructions = ContractHandler.getInstance().parseLine(line);
+            List<Instruction> instructions = ContractParser.parseLine(line);
 
-            if (!ContractHandler.getInstance().checkOperators(instructions)) {
+            if (!ContractVerifier.checkOperators(instructions)) {
                 throw new ContractException("Operator is not correct. Support operators: " +
-                        ContractHandler.getInstance().getListOperators());
+                          ContractVerifier.getListOperators());
             }
 
-            if (!ContractHandler.getInstance().checkExpression(fields, instructions)) {
+            if (!ContractHandler.handleExpression(fields, instructions)) {
                 throw new ContractException("Contract is violated: " + line +
                                             ", where " + fields.get(0).getName());
             }

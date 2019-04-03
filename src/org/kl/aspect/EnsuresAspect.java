@@ -11,6 +11,8 @@ import org.kl.bean.Value;
 import org.kl.contract.Ensures;
 import org.kl.error.ContractException;
 import org.kl.handle.ContractHandler;
+import org.kl.handle.ContractParser;
+import org.kl.handle.ContractVerifier;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -27,14 +29,14 @@ public class EnsuresAspect {
 
         try {
             List<Variable> variables = initParameters(point);
-            List<Instruction> instructions = ContractHandler.getInstance().parseLine(line);
+            List<Instruction> instructions = ContractParser.parseLine(line);
 
-            if (!ContractHandler.getInstance().checkOperators(instructions)) {
+            if (!ContractVerifier.checkOperators(instructions)) {
                 throw new ContractException("Operator is not correct. Support operators: " +
-                        ContractHandler.getInstance().getListOperators());
+                          ContractVerifier.getListOperators());
             }
 
-            if (!ContractHandler.getInstance().checkExpression(value, variables, instructions)) {
+            if (!ContractHandler.handleExpression(value, variables, instructions)) {
                 throw new ContractException("Contract is violated: " + line);
             }
         } catch (IndexOutOfBoundsException e) {

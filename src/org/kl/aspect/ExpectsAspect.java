@@ -9,6 +9,8 @@ import org.kl.bean.Variable;
 import org.kl.contract.Expects;
 import org.kl.error.ContractException;
 import org.kl.handle.ContractHandler;
+import org.kl.handle.ContractParser;
+import org.kl.handle.ContractVerifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,14 +24,14 @@ public class ExpectsAspect {
 
         try {
             List<Variable> variables = initParameters(point);
-            List<Instruction> instructions = ContractHandler.getInstance().parseLine(line);
+            List<Instruction> instructions = ContractParser.parseLine(line);
 
-            if (!ContractHandler.getInstance().checkOperators(instructions)) {
+            if (!ContractVerifier.checkOperators(instructions)) {
                 throw new ContractException("Operator is not correct. Support operators: " +
-                          ContractHandler.getInstance().getListOperators());
+                          ContractVerifier.getListOperators());
             }
 
-            if (!ContractHandler.getInstance().checkExpression(variables, instructions)) {
+            if (!ContractHandler.handleExpression(variables, instructions)) {
                 throw new ContractException("Contract is violated: " + line +
                                             ", where " + variables.get(0).getName());
             }

@@ -10,6 +10,7 @@ import org.kl.bean.Variable;
 import org.kl.bean.Value;
 import org.kl.error.ContractException;
 import org.kl.handle.ContractHandler;
+import org.kl.handle.ContractParser;
 import org.kl.state.Gender;
 
 import java.util.ArrayList;
@@ -43,14 +44,14 @@ public class SnitchTest {
         /* 1 */
         line = "x > 0";
 
-        instruction = ContractHandler.getInstance().parseLine(line).get(0);
+        instruction = ContractParser.parseLine(line).get(0);
 
         assertEquals(instruction, new Instruction("x", ">",  "0"));
 
         /* 2 */
         line = "x > 1 || y >= 5";
 
-        instructions = ContractHandler.getInstance().parseLine(line);
+        instructions = ContractParser.parseLine(line);
 
         assertEquals(instructions.get(0), new Instruction("x", ">",  "1"));
         assertEquals(instructions.get(1), new Instruction("y", ">=", "5"));
@@ -58,7 +59,7 @@ public class SnitchTest {
         /* 3 */
         line = "x > 1 || y >= x && y < 50";
 
-        instructions = ContractHandler.getInstance().parseLine(line);
+        instructions = ContractParser.parseLine(line);
 
         assertEquals(instructions.get(0), new Instruction("x", ">",  "1"));
         assertEquals(instructions.get(1), new Instruction("y", ">=", "x"));
@@ -71,7 +72,7 @@ public class SnitchTest {
         /* 1 */
         line = "x.contains()";
 
-        instruction = ContractHandler.getInstance().parseLineRoutine(line).get(0);
+        instruction = ContractParser.parseLineRoutine(line).get(0);
 
         assertEquals(instruction, new Instruction("x", ".",  "contains"));
     }
@@ -88,7 +89,7 @@ public class SnitchTest {
         instructions.add(new Instruction("x", ">", "0"));
         instructions.add(new Instruction("y", ">", "5"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 2 */
         int a = 5;
@@ -101,7 +102,7 @@ public class SnitchTest {
         instructions.add(new Instruction("a", ">", "-1"));
         instructions.add(new Instruction("b", "<", "2.0"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 3 */
         int c = 5;
@@ -113,7 +114,7 @@ public class SnitchTest {
         variables.add(new Variable(int.class, "d", d));
         instructions.add(new Instruction("c", ">", "d"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 4 */
         short e = 10;
@@ -126,7 +127,7 @@ public class SnitchTest {
         instructions.add(new Instruction("e", ">", "5"));
         instructions.add(new Instruction("e", "<", "f"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 5 */
         boolean j = false;
@@ -136,7 +137,7 @@ public class SnitchTest {
         variables.add(new Variable(boolean.class, "j", j));
         instructions.add(new Instruction("true", "!=", "j"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 6 */
         instructions.clear();
@@ -144,7 +145,7 @@ public class SnitchTest {
         variables.add(new Variable(boolean.class, "j", j));
         instructions.add(new Instruction("j", "==", "false"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 7 */
         Person p = null;
@@ -154,7 +155,7 @@ public class SnitchTest {
         variables.add(new Variable(Person.class, "p", p));
         instructions.add(new Instruction("p", "==", "null"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 8 */
         instructions.clear();
@@ -162,7 +163,7 @@ public class SnitchTest {
         variables.add(new Variable(Person.class, "p", p));
         instructions.add(new Instruction("null", "!=", "p"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertFalse(ContractHandler.handleExpression(variables, instructions));
 
         /* 9 */
         Gender g = Gender.MALE;
@@ -172,7 +173,7 @@ public class SnitchTest {
         variables.add(new Variable(Gender.class, "g", g));
         instructions.add(new Instruction("g", "==", "org.kl.state.Gender.MALE"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertTrue(ContractHandler.handleExpression(variables, instructions));
 
         /* 10 */
         instructions.clear();
@@ -180,7 +181,7 @@ public class SnitchTest {
         variables.add(new Variable(Gender.class, "g", g));
         instructions.add(new Instruction("org.kl.state.Gender.FEMALE", "==", "g"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(variables, instructions));
+        assertFalse(ContractHandler.handleExpression(variables, instructions));
     }
 
     @Test
@@ -190,7 +191,7 @@ public class SnitchTest {
 
         instructions.add(new Instruction("result", ">", "5"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 2 */
         value = new Value(int.class, 15);
@@ -199,7 +200,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("10", "<=", "result"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 3 */
         value = new Value(double.class, 15.0);
@@ -208,7 +209,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("15.0", "!=", "result"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertFalse(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 4 */
         short x = 5;
@@ -220,7 +221,7 @@ public class SnitchTest {
         variables.add(new Variable(short.class, "x", x));
         instructions.add(new Instruction("result", ">", "x"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 5 */
         long y = 15;
@@ -232,7 +233,7 @@ public class SnitchTest {
         variables.add(new Variable(long.class, "y", y));
         instructions.add(new Instruction("y", "!=", "result"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 6 */
         value = new Value(boolean.class, true);
@@ -241,7 +242,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("true", "!=", "result"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 7 */
         value = new Value(boolean.class, true);
@@ -250,7 +251,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("result", "==", "false"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertFalse(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 8 */
         value = new Value(Integer.class, 1);
@@ -259,7 +260,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("result", "==", "null"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertFalse(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 9 */
         value = new Value(Double.class, 5);
@@ -268,7 +269,7 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("null", "!=", "result"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 10 */
         value = new Value(Gender.class, Gender.MALE);
@@ -277,13 +278,13 @@ public class SnitchTest {
         variables.clear();
         instructions.add(new Instruction("result", "==", "org.kl.state.Gender.MALE"));
 
-        assertTrue(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertTrue(ContractHandler.handleExpression(value, variables, instructions));
 
         /* 11 */
         instructions.clear();
         variables.clear();
         instructions.add(new Instruction("org.kl.state.Gender.FEMALE", "==", "result"));
 
-        assertFalse(ContractHandler.getInstance().checkExpression(value, variables, instructions));
+        assertFalse(ContractHandler.handleExpression(value, variables, instructions));
     }
 }
