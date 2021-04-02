@@ -2,25 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0adb3a5e-ae5d-4db9-8d53-85f2e861b1db" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/kl/handle/ContractParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/kl/handle/ContractVerifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/org/kl/snitch/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/org/kl/snitch/util/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/InvariantAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/aspect/InvariantAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/Starter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/EnsuresAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/ExpectsAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/aspect/InvariantAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/aspect/InvariantAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/kl/handle/ContractHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kl/handle/ContractHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/kl/SnitchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kl/SnitchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org/kl/SnitchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/kl/SnitchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/Starter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/aspect/EnsuresAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/aspect/ExpectsAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/aspect/InvariantAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/aspect/InvariantAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/util/Instruction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/util/Value.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/bean/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/util/Variable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/contract/Ensures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Expects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/contract/Expects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/contract/Invariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/contract/Invariant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/error/ContractException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/error/ContractException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/handle/ContractHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/handle/ContractParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/handle/ContractParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/kl/handle/ContractVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/kl/snitch/handle/ContractVerifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/kl/SnitchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/kl/snitch/SnitchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/kl/bean/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/kl/state/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/kl/snitch/state/Gender.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,62 +44,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="snitch" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SnitchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/kl/SnitchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3747">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#14724#14754#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractParser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractVerifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractVerifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2207#2237#0" expanded="true" />
-                <element signature="e#4441#4442#0" expanded="true" />
-                <element signature="e#4493#4494#0" expanded="true" />
-                <element signature="e#4541#4542#0" expanded="true" />
-                <element signature="e#4595#4596#0" expanded="true" />
-                <element signature="e#4857#4858#0" expanded="true" />
-                <element signature="e#4911#4912#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,126 +85,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Starter.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/handle/TraceHandler.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/aspect/Precondition.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/ContractTest.java" />
-        <option value="$PROJECT_DIR$/test/LinePaserTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/test/org/kl/LinePaserTest.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Value.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Instruction.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Parameter.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/parse/LineParser.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/LineParserTest.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/parse/ContractHandler.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/ContractHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/contract/Ensures.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/contract/Expects.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/contract/Invariant.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/state/Gender.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/bean/Person.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/bean/Variable.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/Starter.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/handle/ContractVerifier.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/handle/ContractParser.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java" />
-        <option value="$PROJECT_DIR$/src/org/kl/aspect/InvariantAspect.java" />
-        <option value="$PROJECT_DIR$/test/org/kl/SnitchTest.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="snitch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="snitch" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="6" />
-    <option name="width" value="1373" />
-    <option name="height" value="868" />
-  </component>
+  <component name="ProjectId" id="1qcTqHGlFCzV9sWl93MMfOYYOgi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kl" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kl" type="462c0819:PsiDirectoryNode" />
-              <item name="contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snitch" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kl" type="462c0819:PsiDirectoryNode" />
-              <item name="handle" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -271,20 +105,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.kl.snitch" />
       <recent name="org.kl" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JUnit.SnitchTest">
     <configuration name="Snitch" type="Application" factoryName="Application">
@@ -293,29 +116,29 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="SnitchTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="snitch" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.kl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.kl" />
-      <option name="MAIN_CLASS_NAME" value="org.kl.SnitchTest" />
-      <option name="METHOD_NAME" />
+      <option name="PACKAGE_NAME" value="org.kl.snitch" />
+      <option name="MAIN_CLASS_NAME" value="org.kl.snitch.SnitchTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Snitch" />
@@ -352,6 +175,8 @@
       <workItem from="1549876036227" duration="3144000" />
       <workItem from="1554210457933" duration="8199000" />
       <workItem from="1554271574263" duration="7741000" />
+      <workItem from="1617378069980" duration="301000" />
+      <workItem from="1617378542258" duration="275000" />
     </task>
     <servers />
   </component>
@@ -387,9 +212,6 @@
       <configuration name="SnitchTest" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116288000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -399,341 +221,59 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1057" extended-state="6" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.3264865" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003762" side_tool="true" weight="0.32903227" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3276414" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32988358" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.51135135" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49297297" visible="true" weight="0.2411953" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32977587" />
-      <window_info id="Structure" order="1" sideWeight="0.50702703" side_tool="true" weight="0.2411953" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974126" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32858992" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.51235586" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49752882" visible="true" weight="0.25642964" />
-      <window_info id="Structure" order="1" sideWeight="0.50247115" side_tool="true" weight="0.25642964" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3294893" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003762" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49962378" weight="0.32784185" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3290469" />
-      <window_info id="Favorites" order="5" sideWeight="0.50064516" side_tool="true" weight="0.25282168" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="6" />
-    </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/aspect/InvariantAspect.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/contract/Expects.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/snitch/org/kl/aspect/EnsuresAspect.class" />
-    <entry file="file://$PROJECT_DIR$/snitch.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="72" lean-forward="true" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/aspect/ExpectsAspect.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/kl/Starter.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/aspectjrt-1.9.2.jar!/org/aspectj/lang/JoinPoint.class" />
-    <entry file="file://$PROJECT_DIR$/src/org/kl/handle/TraceHandler.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/aspectjrt-1.9.2.jar!/org/aspectj/lang/reflect/CodeSignature.class" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/Arrays.java" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/Objects.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java" />
-    <entry file="file://$PROJECT_DIR$/test/org/kl/ContractTest.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/List.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/CallerSensitive.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Class.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Byte.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/reflect/MethodSignature.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/annotation/After.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar!/org/aspectj/lang/annotation/AfterReturning.class" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/reflect/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="252" column="13" selection-start-line="252" selection-start-column="13" selection-end-line="252" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="874" column="12" selection-start-line="874" selection-start-column="12" selection-end-line="874" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar!/org/junit/jupiter/api/Assertions.class" />
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="482" column="26" selection-start-line="482" selection-start-column="26" selection-end-line="482" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/annotation/ElementType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="237" column="16" selection-start-line="237" selection-start-column="16" selection-end-line="237" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/error/ContractException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/reflect/Reflection.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar!/org/jetbrains/annotations/NonNls.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar!/org/intellij/lang/annotations/Language.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Invariant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Expects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/contract/Ensures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/kl/state/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/kl/bean/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="2379" column="36" selection-start-line="2379" selection-start-column="31" selection-end-line="2379" selection-end-column="36" />
-          <folding>
-            <element signature="e#94598#94599#0" expanded="true" />
-            <element signature="e#94636#94637#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk1.8.0_131/src.zip!/java/lang/Enum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="232" column="27" lean-forward="true" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
-          <folding>
-            <element signature="e#2979#2980#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#470#471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/bean/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/ExpectsAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/kl/SnitchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="275" lean-forward="true" selection-start-line="275" selection-end-line="275" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3747">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#14724#14754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/EnsuresAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/aspect/InvariantAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractVerifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2207#2237#0" expanded="true" />
-            <element signature="e#4441#4442#0" expanded="true" />
-            <element signature="e#4493#4494#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4595#4596#0" expanded="true" />
-            <element signature="e#4857#4858#0" expanded="true" />
-            <element signature="e#4911#4912#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/kl/handle/ContractParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617378837778">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1617378837778" />
+    <state x="412" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617378836265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="412" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1617378836265" />
+    <state x="479" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617378163613">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="222" width="407" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617378163613" />
+    <state x="360" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617378193753">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="360" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1617378193753" />
+    <state width="1322" height="285" key="GridCell.Tab.0.bottom" timestamp="1617378883355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="285" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617378883355" />
+    <state width="1322" height="285" key="GridCell.Tab.0.center" timestamp="1617378883355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="285" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617378883355" />
+    <state width="1322" height="285" key="GridCell.Tab.0.left" timestamp="1617378883355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="285" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617378883355" />
+    <state width="1322" height="285" key="GridCell.Tab.0.right" timestamp="1617378883355">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="285" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617378883355" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1617378543900">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617378543900" />
   </component>
   <component name="masterDetails">
     <states>
